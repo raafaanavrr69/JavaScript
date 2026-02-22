@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 24px;
+    font-family: Arial, sans-serif;
+    transition: background-color .3s, color .3s;
+}
+
+body>* {
+    width: min(560px, 92vw);
+}
+
+#app {
+    padding: 20px;
+    text-align: center;
+    border-radius: 16px;
+    transition: background-color .3s, color .3s, border-color .3s;
+}
+
+#panelInputs,
+#panelBotones,
+#panelConversion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+input,
+button,
+#salida {
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+input {
+    flex: 1 1 220px;
+    max-width: 260px;
+    padding: 10px;
+}
+
+button {
+    padding: 10px 14px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+#salida {
+    margin: 0;
+    padding: 12px;
+    text-align: center;
+    font-weight: 600;
+}
+
+body.modo-decimal {
+    background: #f3f6a4;
+    color: #1f2937;
+}
+
+#app.modo-decimal {
+    background: #eff9bd;
+    border: 2px solid #cbd5e1;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, .12);
+}
+
+body.modo-decimal button {
+    background: #eff9bd;
+    color: #1f2937;
+    border-color: #cbd5e1;
+}
+
+body.modo-decimal input,
+body.modo-decimal #salida {
+    background: #fff;
+    color: #1f2937;
+    border: 1px solid #cbd5e1;
+}
+
+body.modo-binario {
+    background: #0f172a;
+    color: #f8fafc;
+}
+
+#app.modo-binario {
+    background: #1e293b;
+    border: 2px solid #475569;
+    box-shadow: 0 12px 28px rgba(2, 6, 23, .45);
+}
+
+body.modo-binario button {
+    background: #334155;
+    color: #f8fafc;
+    border-color: #475569;
+}
+
+body.modo-binario input,
+body.modo-binario #salida {
+    background: #0f172a;
+    color: #f8fafc;
+    border: 1px solid #475569;
+}

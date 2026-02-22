@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación de Clima</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Buscar</h1>
+        <form id="weatherForm">
+            <label for="cityInput"></label>
+            <input type="text" id="cityInput" placeholder="Introduce una ciudad" spellcheck="false">
+            <button class="button" type="submit"><img src="img/busqueda.png" alt="Botón de búsqueda"></button>
+            <p id="error-message">
+                Nombre de la ciudad erróneo
+            </p>
+        </form>
+        <div id="forecast-container"></div>
+
+        <div class="panel-resultados">
+            <div id="resultados">
+
+            </div>
+
+            <img id="estadoClima" src="img/lluvia.png" alt="Estado del clima">
+
+            <div id="temperatura">
+                <h3>22°C</h3>
+                <img src="img/indicadorTemperatura.png" alt="Indicador de temperatura">
+            </div>
+
+            <div id="areaDetalles">
+                <div id="humedad">
+                    <h3>50%</h3>
+                    <img src="img/humedad.png" alt="Humedad">
+                </div>
+                <div id="viento">
+                    <h3>15 km/h</h3>
+                    <img src="img/viento.png" alt="Viento">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

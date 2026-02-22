@@ -1,0 +1,218 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 20px;
+    display: grid;
+    place-items: center;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff7ed;
+    background: #2b1a14;
+}
+
+.container {
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: #3a241b;
+    border: 1px solid #6b3f2a;
+    border-radius: 14px;
+    box-shadow: 0 12px 24px rgba(59, 34, 23, 0.25);
+}
+.container h1 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 30px;
+    color: #fbbf24;
+    text-align: center;
+}
+
+#weatherForm {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    align-items: end;
+}
+
+#weatherForm label,
+#error-message,
+#result-message,
+#result-image {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+#cityInput {
+    margin-bottom: 0;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 44px;
+    padding: 0;
+    border: none;
+    border-radius: 8px;
+    background-color: #d97706;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.button img {
+    vertical-align: middle;
+    margin-left: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.button:hover {
+    background-color: #b45309;
+    transform: translateY(-1px);
+}
+
+.button:active {
+    transform: translateY(0);
+}
+
+.panel-resultados {
+    margin-top: 20px;
+    padding: 18px;
+    border: 1px solid #8b5a3c;
+    border-radius: 10px;
+    background-color: #4a2f23;
+}
+
+
+#resultados {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    line-height: 1.35;
+}
+
+#estadoClima {
+    display: block;
+    width: 96px;
+    height: 96px;
+    margin: 6px auto 10px;
+    object-fit: contain;
+}
+
+#temperatura,
+#areaDetalles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#temperatura h3,
+#humedad h3,
+#viento h3 {
+    margin: 0;
+}
+
+#temperatura h3 {
+    font-size: 1.5rem;
+}
+
+#humedad,
+#viento {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+#temperatura img,
+#humedad img,
+#viento img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+#error-message {
+    display: none;
+    margin-top: 12px;
+    text-align: center;
+    color: #ef4444;
+    font-weight: 600;
+}
+
+#result-message {
+    display: none;
+    margin-top: 8px;
+    color: #fbbf24;
+    font-weight: 600;
+}
+
+#result-image {
+    display: none;
+    width: 92px;
+    height: 92px;
+    margin: 6px auto 0;
+    object-fit: contain;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    margin-top: 6px;
+    margin-bottom: 14px;
+    min-height: 44px;
+    padding: 10px 12px;
+    border: 1px solid #f1d5c4;
+    border-radius: 8px;
+    font: inherit;
+    color: #3b2a22;
+    background-color: #fff7ed;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #f59e0b;
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.3);
+}
+input::placeholder {
+    color: #d1a58b;
+    text-align: center;
+}
+
+label {
+    font-weight: 600;
+    color: #f5c7a9;
+}
+
+@media (max-width: 520px) {
+    .container {
+        padding: 18px;
+    }
+
+    .container h1 {
+        font-size: 24px;
+    }
+
+    #estadoClima {
+        width: 78px;
+        height: 78px;
+    }
+
+    #temperatura h3 {
+        font-size: 1.3rem;
+    }
+
+    #areaDetalles {
+        gap: 14px;
+    }
+}
